@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="jquery.js"></script>
+    <script src="function.js"></script> -->
+    <title>Kokuhaku</title>
+</head>
+<body>
+    <div class="modal">
+        <img src="close.png" class="close" onclick="myFunction(-1)" alt="" >
+        <div class="box">
+            <div class="box-body">
+                <img src="menhera-chan-love.gif" alt="">
+            </div>
+            <div class="box-text">
+                <h2>LOVE YOUU!!</h2>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="content">
+            <img src="anime-love.gif" alt="">
+            <h1>Mau gak jadi pacar aku?</h1>
+            
+        </div>
+        <div class="flexbtn">
+            <button class="button" id="yes" onclick="myFunction(1)">Mau!!</button>
+            <button class="button" id="nolak" onclick="gamau()">Nggak!!</button>
+        </div>
+        
+    </main>
+    <script>
+        function myFunction(i){
+            var box = document.getElementsByClassName('modal')[0];
+
+            if(i==1){
+                box.style.display = "block";
+            }else if (i=== -1){
+                box.style.display = "none";
+            }
+        }
+        function gamau(){
+            // var mau = document.getElementById('yes');
+            var i = Math.floor(Math.random()*1000)+1;
+            var j = Math.floor(Math.random()*400)+1;
+            document.getElementById('nolak').style.left = i+"px";
+            document.getElementById('nolak').style.top = j+'px';
+        }
+    </script>
+</body>
+</html>
